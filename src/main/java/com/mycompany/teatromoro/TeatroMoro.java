@@ -15,13 +15,13 @@ public class TeatroMoro {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Definir zonas de asientos y sus precios
+        // Zonas de asientos y sus precios
         String[] zonas = {"VIP", "Palco", "Platea Alta", "Platea Baja", "Galería"};
         double[] precios = {20000, 14000, 11000, 8000, 5000};
         String[][] asientos = new String[zonas.length][10];
         List<String> entradas = new ArrayList<>();
 
-        // Inicializar todos los asientos como disponibles
+        // Asientos como disponibles
         for (int i = 0; i < zonas.length; i++) {
             for (int j = 0; j < 10; j++) {
                 asientos[i][j] = "Disponible";
@@ -55,7 +55,7 @@ public class TeatroMoro {
         } while (opcion != 2);
     }
 
-    // Método para ingresar al sistema
+    // Metodo para ingresar al sistema
     public static void ingresarSistema(Scanner sc, String[] zonas, double[] precios, String[][] asientos, List<String> entradas) {
         int opcion = 0;
         do {
@@ -92,7 +92,7 @@ public class TeatroMoro {
         } while (opcion != 4);
     }
 
-    // Método para comprar una entrada
+    // Metodo para comprar una entrada
     public static void comprarEntrada(Scanner sc, String[] zonas, double[] precios, String[][] asientos, List<String> entradas) {
         try {
             System.out.print("Ingrese edad: ");
@@ -156,7 +156,7 @@ public class TeatroMoro {
         }
     }
 
-    // Método para mostrar asientos
+    // Metodo para mostrar asientos
     public static void mostrarAsientos(String[] zonas, String[][] asientos) {
         for (int i = 0; i < zonas.length; i++) {
             System.out.println("\nZona: " + zonas[i]);
@@ -166,7 +166,7 @@ public class TeatroMoro {
         }
     }
 
-    // Método para gestionar entradas
+    // Metodo para gestionar entradas
     public static void gestionarEntradas(Scanner sc, List<String> entradas) {
         if (entradas.isEmpty()) {
             System.out.println("No hay entradas vendidas.");
